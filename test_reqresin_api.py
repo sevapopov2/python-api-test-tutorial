@@ -12,13 +12,13 @@ def test_get_list_of_users():
 
 def test_create_new_user():
     '''Create new user with API.'''
-    URL = 'https://reqers.in/api/users'
+    URL = 'https://reqres.in/api/users'
     data = {
         'name': 'Vsevolod Popov',
         'movies': ['Live until Monday', 'Where is nophelet located?']
     }
     response = requests.post(URL, data=data)
-    assert response.status_code == 200
+    assert response.status_code == 201
 
 
 def test_update_user():
