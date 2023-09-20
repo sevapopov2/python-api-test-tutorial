@@ -19,3 +19,13 @@ def test_create_new_user():
     }
     response = requests.post(URL, data=data)
     assert response.status_code == 200
+
+
+def test_update_user():
+    '''Update a user with API.'''
+    URL = 'https://reqres.in/api/users/2'
+    data = {
+        'name': 'Vsevolod New'
+    }
+    response = requests.put(URL, data=data)
+    assert response.status_code == 200
