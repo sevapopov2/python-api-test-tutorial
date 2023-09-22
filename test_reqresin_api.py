@@ -29,3 +29,10 @@ def test_update_user():
     }
     response = requests.put(URL, data=data)
     assert response.status_code == 200
+
+
+def test_delete_user():
+    '''Delete a user with an API.'''
+    URL = 'https://reqres.in/api/users/2'
+    response = requests.delete(URL)
+    assert response.status_code == 204
